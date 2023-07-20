@@ -1,0 +1,29 @@
+{
+  "name": "gympasslike",
+  "version": "1.0.0",
+  "description": "Gym Pass like",
+  "main": "index.js",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start:dev": "tsx watch src/server.ts",
+    "start": "node build/server.js",
+    "build": "tsup src --out-dir build"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "20.2.5",
+    "prisma": "5.0.0",
+    "tsup": "6.7.0",
+    "tsx": "3.12.7",
+    "typescript": "5.0.4"
+  },
+  "dependencies": {
+    "@prisma/client": "5.0.0",
+    "dotenv": "16.0.3",
+    "fastify": "4.17.0",
+    "zod": "3.21.4"
+  }
+}
