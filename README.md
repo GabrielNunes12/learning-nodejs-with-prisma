@@ -4,7 +4,7 @@ Gym Pass like
 
 # RFs (Requisitos Funcionais)
 
-- [ ] Deve ser possível se cadastrar;
+- [x] Deve ser possível se cadastrar;
 - [ ] Deve ser possível se autenticar;
 - [ ] Deve ser possível obter perfil de usuário logado;
 - [ ] Deve ser possível obter numero de check-ins realizados pelo usuário logado;
