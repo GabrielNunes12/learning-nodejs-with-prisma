@@ -12,8 +12,8 @@ export async function userRegisterService(
     email: z.string(),
     password: z.string().min(6),
   });
-  let { name, email, password } = registerBodySchema.parse(request.body);
-  password = await hash(password, 5);
-  await UserRegisterRepository(name, email, password);
+  const { name, email, password } = registerBodySchema.parse(request.body);
+  const password_hash = await hash(password, 5);
+  await UserRegisterRepository(name, password_hash, email);
   return reply.status(201).send();
 }
