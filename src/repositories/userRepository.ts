@@ -9,7 +9,8 @@ export async function UserRegisterRepository(
     where: { email },
   });
   if (user) {
-    throw new UserHandler("Email already exists", 409, new Date()).message;
+    throw new UserHandler("Email already exists", 409, new Date())
+      .messageStatus;
   }
   await prisma.user.create({
     data: { name, email, password_hash: password },
